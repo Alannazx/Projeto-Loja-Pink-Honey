@@ -2,9 +2,9 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
-    <title>Login - Loja Cosplay</title>
+    <title>Login - Loja Pink Honey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="public/assets/css/style.css">
+    <link rel="stylesheet" href="/lojacosmeticos_alalet/public/assets/css/style.css">
 </head>
 <body>
 <div class="container">
@@ -12,7 +12,7 @@
         <div class="brand">
             <div class="badge"></div>
             <div>
-                <h1>Loja de Cosméticos</h1>
+                <h1>Loja de Cosméticos Pink Honey</h1>
                 <small>Acesso ao sistema</small>
             </div>
         </div>
