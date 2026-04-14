@@ -7,7 +7,7 @@ public static function getConnection()
 if (self::$conn === null) {
 try {
 self::$conn = new PDO(
-"mysql:host=localhost;dbname=loja_roupas;charset=utf8mb4",
+"mysql:host=localhost;dbname=projetocosmetico;charset=utf8mb4",
 "root",
 "",
 [
