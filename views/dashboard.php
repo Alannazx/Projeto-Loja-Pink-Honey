@@ -25,7 +25,7 @@ $perfil = $_SESSION['perfil'] ?? 'vendedor';
 <div class="pill">
 Logado como <strong><?php echo htmlspecialchars($nome); ?></strong>
 (<?php echo htmlspecialchars($perfil); ?>)
-• <a href="/loja_roupas/index.php?controller=auth&action=logout">Sair</a>
+• <a href="/lojacosmeticos_alalet/index.php?controller=auth&action=logout">Sair</a>
 </div>
 </div>
 <div class="card">
