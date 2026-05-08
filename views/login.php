@@ -9,7 +9,271 @@
 </head>
 <body>
 
+<style> 
+/*css*/
+:root{
+  --bg1:#FFD3F0;
+  --bg2:#BA00A6;
+  --card:#EB5EDB;
 
+   --txt:#000000;
+  --muted:#7D7777;
+
+   --neon1:#FC9DF3; /* rosa */
+  --neon2:#FC9DF3; /* azul */
+
+   --radius:18px;
+  --shadow:0 18px 60px rgba(255, 250, 250, 0.45);
+}
+
+ /* ===============================
+   RESET BÁSICO
+   =============================== */
+*{
+  box-sizing:border-box;
+}
+
+ html, body{
+  height:100%;
+}
+
+ body{
+  margin:0;
+font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--txt);
+
+   background:
+    radial-gradient(900px 500px at 10% 15%, rgba(255, 82, 220, 0.25), transparent 60%),
+    radial-gradient(900px 500px at 90% 25%, rgba(234, 0, 255, 0.2), transparent 60%),
+    radial-gradient(900px 500px at 50% 90%, rgba(239, 255, 91, 0.12), transparent 60%),
+    linear-gradient(180deg, var(--bg1), var(--bg2));
+}
+
+ /* ===============================
+   LINKS
+   =============================== */
+a{
+  color:var(--neon2);
+  text-decoration:none;
+}
+
+ a:hover{
+  text-decoration:underline;
+}
+
+ /* ===============================
+   CONTAINER E CARD
+   =============================== */
+.container{
+  width:min(1100px, 92vw);
+  margin:0 auto;
+  padding:100px 0;
+}
+
+ .card{
+  background:linear-gradient(180deg, rgba(255, 254, 198, 0.92), rgba(255, 254, 190, 0.92));
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:22px;
+}
+
+ /* ===============================
+   BRAND / TOPO
+   =============================== */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:16px;
+}
+
+ .badge{
+  width:44px;
+  height:44px;
+  border-radius:14px;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(250, 34, 207, 0.9), transparent 60%),
+    radial-gradient(circle at 70% 70%, rgba(235, 155, 255, 0.9), transparent 60%),
+    linear-gradient(135deg, rgba(238, 255, 0, 0.61), rgba(255,43,214,.55));
+  box-shadow:0 0 30px rgba(255,43,214,.25);
+}
+
+ .brand h1{
+  margin:0;
+  font-size:18px;
+  letter-spacing:.4px;
+}
+
+ .brand small{
+  display:block;
+  margin-top:2px;
+  color:var(--muted);
+}
+
+ /* ===============================
+   TOPBAR
+   =============================== */
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  margin-bottom:16px;
+}
+
+ .pill{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 14px;
+  border-radius:999px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.10);
+  color:var(--muted);
+}
+
+ .pill strong{
+  color:var(--txt);
+}
+
+ /* ===============================
+   FORMULÁRIOS
+   =============================== */
+label{
+  display:block;
+  margin:14px 0 6px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+ input, select{
+  width:100%;
+  padding:12px;
+  border-radius:14px;
+  border:1px solid rgba(253, 253, 253, 0.1);
+  background:rgba(0, 0, 0, 0.25);
+  color:var(--txt);
+  outline:none;
+}
+
+ input:focus, select:focus{
+  border-color:rgba(0,229,255,.55);
+  box-shadow:0 0 0 3px rgba(0,229,255,.18);
+}
+
+ /* ===============================
+   BOTÕES
+   =============================== */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 16px;
+  border-radius:10px;
+  border:0;
+  cursor:pointer;
+  font-weight:800;
+  color:#0b0b1a;
+
+   background:linear-gradient(90deg, var(--neon2), var(--neon1));
+  box-shadow:0 10px 30px rgba(250, 49, 210, 0.18);
+}
+
+ .btn:hover{
+  filter:brightness(1.05);
+}
+
+ .btn-secondary{
+  background:linear-gradient(90deg, rgba(255,255,255,.18), rgba(255,255,255,.06));
+  color:var(--txt);
+  border:1px solid rgba(255,255,255,.12);
+}
+
+ /* ===============================
+   NAVEGAÇÃO
+   =============================== */
+.nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:16px;
+}
+
+ .nav a{
+  padding:10px 14px;
+  border-radius:14px;
+  background:rgba(0,0,0,.20);
+  border:1px solid rgba(255,255,255,.10);
+}
+
+ .nav a:hover{
+  border-color:rgba(255,43,214,.40);
+  box-shadow:0 0 0 3px rgba(255,43,214,.12);
+}
+
+ /* ===============================
+   KPIs / DASHBOARD
+   =============================== */
+.kpis{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:14px;
+  margin-top:18px;
+}
+
+ .kpi{
+  padding:16px;
+  border-radius:var(--radius);
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+}
+
+ .kpi .label{
+  color:var(--muted);
+  font-size:13px;
+}
+
+ .kpi .value{
+  font-size:22px;
+  font-weight:800;
+  margin-top:6px;
+}
+
+ /* ===============================
+   RESPONSIVO
+   =============================== */
+@media (max-width:900px){
+  .topbar{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+   .kpis{
+    grid-template-columns:repeat(2, 1fr);
+  }
+} 
+
+.table { width:100%; border-collapse: collapse; }
+.table th, .table td { padding: 10px; border-bottom: 1px solid rgba(255,255,255,.12); vertical-align: middle; }
+.thumb { width:56px; height:56px; object-fit: cover; border-radius: 10px; border: 1px solid rgba(255,255,255,.18); }
+.tag { padding: 4px 10px; border-radius: 999px; font-size: 12px; display: inline-block; }
+.tag.ok { background: rgba(0,255,170,.15); border: 1px solid rgba(0,255,170,.35); }
+.tag.off { background: rgba(255,80,80,.12); border: 1px solid rgba(255,80,80,.35); }
+.btn-success { background: rgba(0,255,170,.18); border: 1px solid rgba(0,255,170,.35); }
+.muted { opacity: .8; font-size: 12px; }
+.grid { display: grid; grid-template-columns: 380px 1fr; gap: 16px; align-items: start; }
+.header-inner { display:flex; justify-content: space-between; align-items:center; }
+.badge { margin-left: 8px; padding: 4px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,.25); }
+
+
+
+
+
+
+
+
+</style>
 
 <div class="container">
     <div class="card" style="max-width:520px; margin:70px auto;">
@@ -39,7 +303,7 @@
 
 
         <p style="margin-top:14px; color:var(--muted); font-size:13px;">
-            Dica: se der erro, confirme se o usuário está <strong>ativo</strong> e se a senha está
+            Dica: Se der erro, confirme se o usuário está <strong>ativo</strong> e se a senha está
             salva com <strong>hash</strong>.
         </p>
     </div>
