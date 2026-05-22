@@ -167,8 +167,7 @@ onclick="return confirm('⚠️ DELETAR permanentemente? Não há volta!')">Excl
 
 /////////////////// CÓDIGO DO CHAT ///////////////
 
-
-            <?php
+<?php
 // helper simples para resolver imagem por ID sem usar banco
 function imagemProdutoUrl(int $produtoId): string
 {
@@ -187,14 +186,15 @@ return "public/assets/img/produto_sem_foto.png";
 <head>
 <meta charset="utf-8">
 <title>Produtos</title>
-<link rel="stylesheet" href="public/assets/css/style.css">
-  <style>
+
+<style>
 
 .produto{
  margin:0;
  padding:0;
  box-sizing:border-box;
 }
+
 
 :root{
  --bg1:#FFD3F0;
@@ -206,7 +206,6 @@ return "public/assets/img/produto_sem_foto.png";
 
 }
 
-
 body{
     min-height:100vh;
     font-family:Arial, Helvetica, sans-serif;
@@ -214,7 +213,10 @@ body{
     padding:40px;
 }
 
-/* HEADER */
+
+ /* ===============================
+HEADER
+  =============================== */
 
 .header{
     width:100%;
@@ -255,7 +257,10 @@ body{
     gap:20px;
 }
 
-/* LAYOUT */
+
+ /* ===============================
+  LAYOUT
+  =============================== */
 
 .grid{
     max-width:1400px;
@@ -311,7 +316,10 @@ textarea.input{
     color:var(--muted);
 }
 
-/* BOTÕES */
+
+ /* ===============================
+  BOTÕES
+  =============================== */
 
 .actions{
     display:flex;
@@ -347,7 +355,10 @@ textarea.input{
     background:#ececec;
 }
 
-/* TABELA */
+
+ /* ===============================
+TABELA
+  =============================== */
 
 .table{
     width:100%;
@@ -389,7 +400,28 @@ textarea.input{
     background:#ffb4b4;
 }
 
-/* RESPONSIVO */
+
+
+ /* ===============================
+  FONTE
+  =============================== */
+  @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.bodoni-moda-uniquifier {
+ font-family: "Bodoni Moda", serif;
+ font-optical-sizing: auto;
+ font-weight: weight;
+ font-style: normal;
+}
+
+/* ===============================
+  FIM DA FONTE
+  =============================== */
+
+
+ /* ===============================
+RESPONSIVO
+  =============================== */
 
 @media(max-width:1100px){
 
@@ -433,7 +465,7 @@ textarea.input{
     <div class="header-inner">
 
         <div class="logo">
-            <h1>Loja Pink Honey</h1>
+            <h1 class="bodoni-moda-uniquifier">Loja Pink Honey</h1>
             <span class="badge">Produtos</span>
         </div>
 
@@ -453,11 +485,9 @@ textarea.input{
 
 <div class="grid">
 
-    <!-- FORMULÁRIO -->
-
     <div class="card">
 
-        <h2>
+        <h2 class="bodoni-moda-uniquifier">
             <?= $editar ? "Editar Produto #".(int)$editar['id'] : "Cadastrar Produto" ?>
         </h2>
 
@@ -544,11 +574,10 @@ textarea.input{
 
     </div>
 
-    <!-- TABELA -->
 
     <div class="card">
 
-        <h2>Lista de Produtos</h2>
+        <h2 class="bodoni-moda-uniquifier">Lista de Produtos</h2>
 
         <table class="table">
 
