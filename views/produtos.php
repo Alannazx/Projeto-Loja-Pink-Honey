@@ -459,7 +459,7 @@ RESPONSIVO
                     <th>ID</th>
                     <th>Nome</th>
                     <th>Categoria</th>
-                    <th>Status</th>
+                    <th>Ativo</th>
                     <th>Ações</th>
                 </tr>
 
